@@ -3,12 +3,8 @@ class Connection
 {
     public static function conn1()
     {
-        // Xampp
-        // $mysqli = new mysqli('localhost', 'root', '', 'bd1');
-        // Mampp
-        // $mysqli = new mysqli('localhost', 'root', 'root', 'bd1');
 
-        $mysqli = new mysqli('localhost', 'laura', 'madrid', 'bd1');
+        $mysqli = new mysqli('localhost', 'admin', 'madrid', 'trabajo');
 
         if($mysqli->connect_errno)
         {
@@ -20,5 +16,12 @@ class Connection
             return $mysqli;
         }
     }
+}
+// Establecer la conexión global
+$mysqli = Connection::conn1();
+
+// Verificar si la conexión se estableció correctamente
+if (!$mysqli) {
+    die("La conexión a la base de datos falló: " . mysqli_connect_error());
 }
 ?>
