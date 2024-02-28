@@ -2,7 +2,7 @@
         <div class="navegacion">
             <ul>
                 <li>
-                    <a href="clientes1.php">
+                    <a href="Views/clientes1.php">
                         <span class="flex alineado icono">
                             <img src="Assets/img/clientes.png" alt="">
                         </span>

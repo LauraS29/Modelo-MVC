@@ -1,15 +1,14 @@
 <?php
-  
     // Llamada a la conexión
-    require_once '../Db/Con1Db.php';
+    require_once './Db/Con1Db.php';
     // Llamada al modelo
-    require_once '../Models/Consulta2Model.php';
+    require_once './Models/clientes2Model.php';
 
     // Instancia del objeto
     $oData = new Datos;
 
     // Llamada al método
-    $sql = "select * from coches order by mar_coc, mod_coc, aut_coc";
+    $sql = "select * from cliente order by cod_cliente, DNI_cliente, Nom_cliente";
     $data = $oData->getData1($sql);
 
     if(empty($data))
@@ -36,9 +35,9 @@
             echo
             "
             <div class='bloque0'>
-                <div class='bloque1'>$row->mar_coc</div>
-                <div class='bloque1'>$row->mod_coc</div>
-                <div class='bloque1'>$row->aut_coc</div>
+                <div class='bloque1'>$row->Cod_cliente</div>
+                <div class='bloque1'>$row->DNI_cliente</div>
+                <div class='bloque1'>$row->Nom_cliente</div>
             </div>
             ";
         }
